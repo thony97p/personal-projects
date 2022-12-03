@@ -1,0 +1,287 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype")
+}
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype")
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+body > * { margin-left: 150px }
+p { margin: 0 }
+h1 {margin: 1em 0 0;}
+h2 {
+    font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    margin-top: 0;
+    padding: .1em .2em;
+    font-size: 32px;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
+}
+h2:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.posi-abs { position: absolute }
+.posi-rel { position: relative }
+.posi-fix { position: fixed }
+.posi-sck { position: sticky }
+.posi-stat { position: static }
+.inline-block { display: inline-block }
+.flex { display: flex }
+.flex-w { flex-wrap: wrap }
+.flex-rev-w { flex-wrap: wrap-reverse }
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-rev-column {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-rev-row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.justify-ctr { justify-content: center }
+.align-ctr { align-items: center }
+.txt-ctr { text-align: center }
+.txt-justify { text-align: justify }
+.txt-right { text-align: right }
+.txt-upper { text-transform: uppercase }
+.txt-lower { text-transform: lowercase }
+.txt-cap { text-transform: capitalize }
+.txt-italic { font-style: italic }
+.font-100 { font-weight: 100 }
+.font-200 { font-weight: 200 }
+.font-300 { font-weight: 300 }
+.font-400 { font-weight: 400 }
+.font-500 { font-weight: 500 }
+.font-600 { font-weight: 600 }
+.font-700 { font-weight: 700 }
+.font-800 { font-weight: 800 }
+.font-900 { font-weight: 900 }
+.font-bold { font-weight: bold }
+.txt-underl { text-decoration: underline }
+.txt-overl { text-decoration: line-through }
+.txt-std { text-decoration: none }
+.list-item {
+    display: list-item;
+    list-style-type: disc
+}
+.list-none {
+    display: list-item;
+    list-style-type: none
+}
+.list-square {
+    display: list-item;
+    list-style-type: square
+}
+.list-circle {
+    display: list-item;
+    list-style-type: circle 
+}
+.bd-rd-2 { border-radius: 2px }
+.bd-rd-5 { border-radius: 5px }
+.bd-rd-10 { border-radius: 10px }
+.bd-rd-circle { border-radius: 50% }
+
+header {
+    position: relative;
+    height: 70vh;
+    background-image: url("a") , linear-gradient(to bottom right, #ad52d43f, #ba68c888);
+    color: #fafafa;
+}
+#About {
+    position: absolute;
+    left:50px;
+    bottom: 50px;
+    height: calc(50%);
+    width: calc(50%);
+    padding: 10px 15px 0 10px;
+    background-color: #adafac3d;
+    border: 2px solid #707070;
+}
+#About > p {
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    padding-inline-start: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}
+#About > p::first-letter {
+    float: left;
+    line-height: 0.8em;
+    font-size: 3.6em;
+    margin-right: .2em;
+}
+
+nav {
+    font-family: Raleway, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 0;
+    max-width: 150px;
+    height: 100vh;
+    background-color: #707070d5;
+}
+
+nav ul { margin: 0;
+    padding: 0 }
+
+nav li {
+    padding: 16px;
+    font-size: 0.9em;
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+}
+nav li[class="active"] {
+    background-color: #2a2a2ad5;
+    transition: 0.3s;
+}
+nav li > a {
+    color: #f0f0f0;
+}
+nav li > a > i {
+    font-size: 2em;
+    padding-bottom: 0.25em;
+}
+
+body > div {
+    padding: 20px;
+    position: relative
+}
+body > div:nth-child(2n) {
+    background-color: #9ccc65;
+}
+body > div:nth-child(2n+1) {
+    background-color: #bb66cc;
+}
+
+.timeline {
+    padding: 20px 50px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 8px;
+    background-color: white;
+    margin-left: -4px;
+    border-radius: 4px;
+}
+.container dt:first-child { font-size: large }
+.timeline > dl > .container > .content {
+    max-width: 40%;
+    margin-right: 30px;
+    padding: 1em 1.5em;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.timeline > dl > .container:nth-child(2n) > .content {
+    margin-right: unset;
+    margin-left: 30px;
+}
+
+.timeline > dl > .container:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+*:nth-child(2n) > .arrow-12::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    right: 100%;
+}
+.timeline > dl > .container:nth-child(2n) > .content::before {
+    border: medium solid white;
+    border-width: 10px 12px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.85) transparent transparent ;
+}
+*:nth-child(2n+1) > .arrow-12::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    left: 100%;
+}
+.timeline > dl > .container:nth-child(2n+1) > .content::before {
+    border: medium solid white;
+    border-width: 10px 0 10px 12px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.85);
+}
+.timeline > dl > .container > .dot {
+    position: relative;
+    left: 49%;
+    top: 16px;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: medium solid rgb(255, 185, 55);
+    z-index: 10;
+}
+.timeline > dl > .container:nth-child(2n) > .dot {
+    left: -49%;
+}
+dl {
+    margin: 0;
+}
+dt {
+    font-weight: bold;
+}
+dt[class="job"] {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+dt[class="job"] > span {
+    font-weight: bold;
+    font-style: italic;
+}
+.timeline > dl > .container > .blank {
+    width:50%
+}
+
+#Crafts > div {
+    gap: 40px;
+}
+#Crafts img {
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+}
+#Contact > div > * {
+    padding: 5px 10px;
+}
+
+#Contact > div > i {
+    font-size: 24x;
+}
+
+#Experiences ul { padding-inline-start: 10px }
+
+#home {
+    bottom: 40px;
+    right: 50px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    opacity: 0.4;
+    transition: opacity 2s ease-out;
+}
+#home:hover { 
+    opacity: 0.9;
+    transition: opacity 0s;
+}
+#home > i {
+    font-size: 2em;
+    color: #707070;
+}
