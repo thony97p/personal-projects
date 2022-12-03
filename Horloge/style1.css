@@ -1,0 +1,276 @@
+body {
+    background-color: #333;
+}
+
+@font-face {
+     font-family: "Mandalore";
+     src: url(Mandalore-K77lD.otf);
+}
+
+@font-face {
+     font-family: Raleway;
+     src: url(Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+@keyframes breathe {
+    0% { box-shadow: inset 0 0 50px rgba(157, 172, 158, 0.6), 0 0 4px #d9f04c, 0 0 30px #52ed3b }
+    100% { box-shadow: inset 0 0 50px rgba(157, 172, 158, 0.6), 0 0 10px #d9f04c, 0 0 50px #52ed3b }
+}
+@keyframes lights-date {
+    0% { }
+    15% { text-shadow: 0 0 3px #aaa, 0 0 12px #d9f04c, 0 0 30px #45ff29}
+    100% { text-shadow: 0 0 3px #aaa, 0 0 5px #999, 0 0 12px #d9f04c, 0 0 15px #45ff29,0 0 20px #45ff29 , 0 0 30px #45ff29, 0 0 40px #52ed3b }
+}
+@keyframes uplight-hour {
+    0%, 4%, 9% { box-shadow: none }
+    5%, 8%, 30% {box-shadow: 0 4px 5px 1px #d9f04c, 0 4px 12px 4px #52ed3b}
+    20% { box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b }
+    19%, 21%, 29% { box-shadow: none }
+    33%, 60% { box-shadow: none }
+    61% {box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+    64%, 90% {box-shadow: 0 3px 5px #d9f04c, 0 4px 10px 4px #52ed3b}
+    100% {box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+}
+@keyframes backlight-hour {
+    0%, 4%, 6% { box-shadow: 0 0 8px }
+    5%, 20% {box-shadow: 0 0 8px, 0 2px 10px -10px #d9f04c, 0 4px 20px -10px #78e76788;}
+    30%, 64% { box-shadow: 0 0 8px, 0 2px 15px -10px #d9f04c, 0 3px 25px -10px #78e76788; }
+    19%, 21%, 29% { box-shadow: 0 0 8px }
+    33%, 62% { box-shadow: 0 0 8px }
+    92% { box-shadow: 0 0 8px, 0 2px 15px -10px #d9f04c, 0 3px 25px -10px #78e76788; }
+    100% {box-shadow: 0 0 8px, 0 2px 30px -10px #d9f04c, 0 6px 50px -10px #78e76788;}
+}
+@keyframes uplight-minute {
+    0%, 15%, 17% { box-shadow: none }
+    16% {box-shadow: 0 4px 5px 1px #d9f04c, 0 4px 12px 4px #52ed3b}
+    50%, 56% { box-shadow: none }
+    51%, 55% {box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+    98% { box-shadow: none }
+    100% {box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+}
+@keyframes backlight-minute {
+    0%, 15%, 17% { box-shadow: 0 0 8px }
+    16% {box-shadow: 0 0 8px, 0 2px 10px -10px #d9f04c, 0 4px 20px -10px #78e76788;}
+    50%, 58% { box-shadow: 0 0 8px }
+    53% {box-shadow: 0 0 8px, 0 2px 10px -10px #d9f04c, 0 4px 20px -10px #78e76788;}
+    55% { box-shadow: 0 0 8px, 0 2px 18px -10px #d9f04c, 0 4px 30px -10px #78e76788; }
+    99% { box-shadow: 0 0 8px }
+    100% { box-shadow: 0 0 8px, 0 2px 30px -10px #d9f04c, 0 6px 50px -10px #78e76788 }
+}
+@keyframes uplight-second {
+    0%, 8%, 10%, 16% { box-shadow: none }
+    9%, 15% { box-shadow: 0 4px 5px 1px #d9f04c, 0 4px 12px 4px #52ed3b}
+    31%, 39% { box-shadow: none }
+    33% { box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+    46% { box-shadow: none }
+    47% { box-shadow: 0 4px 5px 1px #d9f04c, 0 4px 12px 4px #52ed3b}
+    50% { box-shadow: none }
+    51% { box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b }
+    52%, 54%, 56%, 58% { box-shadow: 0 2px 5px 1px #d9f04c, 0 4px 6px 4px #52ed3b }
+    53%, 55%, 57%, 59% { box-shadow: 0 2px 3px 1px #d9f04c, 0 4px 6px #52ed3b }
+    72%, 88% { box-shadow: none }
+    89%, 100% {box-shadow: 0 4px 10px 2px #d9f04c, 0 8px 20px 8px #52ed3b}
+}
+@keyframes backlight-second {
+    0%, 8%, 10%, 16% {box-shadow: 0 0 8px }
+    9%, 15% { box-shadow: 0 0 8px, 0 2px 10px -10px #d9f04c, 0 4px 20px -10px #78e76788 }
+    31%, 39% { box-shadow: 0 0 8px }
+    33% { box-shadow: 0 0 8px, 0 2px 30px -10px #d9f04c, 0 6px 50px -10px #78e76788}
+    50% { box-shadow: 0 0 8px }
+    51% { box-shadow: 0 0 8px, 0 2px 18px -10px #d9f04c, 0 4px 30px -10px #78e76788 }
+    52%, 54%, 56%, 58% { box-shadow: 0 0 8px, 0 2px 10px -10px #d9f04c, 0 4px 20px -10px #78e76788 }
+    53%, 55%, 57%, 59% { box-shadow: 0 0 8px, 0 2px 15px -10px #d9f04c, 0 3px 25px -10px #78e76788 }
+    75%, 88% { box-shadow: 0 0 8px }
+    90%, 100% { box-shadow: 0 0 8px, 0 2px 30px -10px #d9f04c, 0 6px 50px -10px #78e76788 }
+}
+
+.allume {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 150px;
+    height: 80px;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: hwb(112 10% 35% / 0.702);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.allume #interr {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cadran.animate:first-child::before { animation: uplight-hour 6s forwards;}
+.cadran.animate:first-child { animation: backlight-hour 6s forwards;}
+.cadran.animate:nth-child(3)::before { animation: uplight-minute 6s forwards;}
+.cadran.animate:nth-child(3) { animation: backlight-minute 6s forwards;}
+.cadran.animate:nth-child(5)::before { animation: uplight-second 6s forwards;}
+.cadran.animate:nth-child(5) { animation: backlight-second 6s forwards;}
+
+.date {
+    position: relative;
+    margin: 60px 20px;
+    font-family: Raleway;
+    text-align: center;
+}
+
+.date a {
+    font-size: 40px;
+    color: #999;
+    text-decoration: none;
+}
+.date a.animate { animation: lights-date 6s forwards }
+/*.date a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    border: 1px solid transparent;
+    box-shadow: 0 -10px 15px #52ed3b;
+}*/
+
+.clock {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.cadran {
+    position: relative;
+    height: 90px;
+    width: 100px;
+    font-size: 60px;
+    margin: 0.2em;
+    padding: 0.2em;
+    background-image: linear-gradient(150deg, rgba(255,255,255,0.2), rgba(202, 238, 171, 0.2) 75%, rgba(200,200,200,0.3));
+    backdrop-filter: blur(9px);
+    box-shadow: 0 0 8px;
+}
+ 
+.cadran::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: 2s ease-out;
+}
+.a {
+    height: 100%;
+    width: 100%;
+    font-family: Mandalore;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    color: #999;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.separator {
+    font-family: Mandalore;
+    font-size: 56px;
+    color: black;
+}
+
+.analog-clock {
+    position: absolute;
+    margin-top: 70px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: #333;
+    border: 5px solid black;
+    border-radius: 50%;
+    box-shadow:inset 0 0 50px rgba(157, 172, 158, 0.6), 0 0 4px #d9f04c, 0 0 30px #52ed3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.analog-clock.animate { animation: breathe 1s linear alternate infinite }
+.analog-clock::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.analog-clock .hour-hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+}
+.analog-clock .hour-hand::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 5px;
+    background-color: black;
+    z-index: 5;
+}
+
+.analog-clock .minute-hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    width: 140px;
+}
+.analog-clock .minute-hand::before {
+    content: '';
+    position: absolute;
+    height: 65px;
+    width: 4px;
+    background-color: black;
+    z-index: 8;
+}
+
+.analog-clock .second-hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+    width: 130px;
+}
+.analog-clock .second-hand::before {
+    content: '';
+    position: absolute;
+    height: 85px;
+    width: 2px;
+    background-color: rgb(216, 14, 14);
+    z-index: 10;
+}
+
+.analog-clock span {
+    position: absolute;
+    inset: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotate(calc(30deg * var(--i)));
+}
+.analog-clock span b {
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
